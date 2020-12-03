@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<title>Post-It Notes</title>
+</head>
+
+<body>
+	<h2>Welcome to Post-It Notes</h2>
+
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th style="width: 5%">#</th>
+					<th style="width: 80%">Note</th>
+					<th style="width: 15%">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="note : ${notes}">
+					<td th:text="${note.sequence}"></td>
+					<td>
+						<b th:text="${note.title}"></b>
+						<p th:text="${note.content}"></p>
+					</td>
+					<td>
+						<span>
+							<a th:href="@{/edit/{id}(id=${note.id})}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+							<a th:href="@{/delete/{id}(id=${note.id})}"	class="btn btn-primary"><i class="fas fa-trash"></i></a>
+						</span>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+
+		<p>
+			<a href="/add" class="btn btn-primary"><i class="fas fa-plus-circle"></i></a>
+		</p>
+
+	</div>
+</body>
+</html>

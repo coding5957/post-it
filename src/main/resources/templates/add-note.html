@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<title>Add new note</title>
+</head>
+
+<body>
+	<h2>Add new note</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-md">
+			
+				<form action="#" th:action="@{/addnote}" th:object="${note}" method="post">
+					<div class="row">
+						<div class="form-group col-md">
+							<label for="title" class="col-form-label">Title</label> 
+							<input type="text" th:field="*{title}" class="form-control" id="title" placeholder="Title"/> 
+							<span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger"></span>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="form-group col-md">
+							<label for="content" class="col-form-label">Content</label> 
+							<textarea th:field="*{content}" class="form-control" id="content" placeholder="Content" rows="10"></textarea> 
+							<span th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="text-danger"></span>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md">
+							<input type="submit" class="btn btn-primary" value="Add">
+						</div>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
