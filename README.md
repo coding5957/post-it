@@ -4,11 +4,15 @@
 Java, SpringBoot, SpringMVC, Hibernate, file based H2 db
 
 
-To build locally...
+![Java CI with Maven](https://github.com/coding5957/post-it/workflows/Java%20CI%20with%20Maven/badge.svg)
+
+
+
+## To build locally...
 
 
 Preqs
-1. JDK 11 (https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip)
+1. JDK 11 (https://jdk.java.net/java-se-ri/11)
 2. Maven (https://mirrors.gethosted.online/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)
 3. Gitscm (https://git-scm.com/download/win)
 
@@ -33,6 +37,30 @@ Point a browser at `http://localhost:8080`
 NOTE: *The h2 file based db post-it will be located in the current directory*
 	
 
+
+## To build docker image locally...
+
+
+Preqs
+
+1. As above
+2. Docker (https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
+
+
+Steps
+
+- Run the maven build as above
+
+- Build docker image
+	
+	`docker build -t post-it .`\
+	`docker images`
+	
+- Run the image in a container
+
+	`docker run -d --name post-it -p 8080:8080 post-it`
+	
+	
 
 
 
