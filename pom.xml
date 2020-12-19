@@ -11,13 +11,13 @@
 	</parent>
 	<groupId>uk.co.northrealm</groupId>
 	<artifactId>postit</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>postit</name>
 	<description>Post-It project</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
 	</properties>
 
 	<dependencies>

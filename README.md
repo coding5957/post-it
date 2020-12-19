@@ -12,7 +12,7 @@ Java, SpringBoot, SpringMVC, Hibernate, file based H2 db
 
 
 Preqs
-1. JDK 11 (https://jdk.java.net/java-se-ri/11)
+1. JDK 15 (https://jdk.java.net/15/)
 2. Maven (https://mirrors.gethosted.online/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)
 3. Gitscm (https://git-scm.com/download/win)
 
