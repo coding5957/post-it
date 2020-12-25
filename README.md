@@ -26,7 +26,7 @@ Steps
 
 - Execute
 
-	`java -jar target\postit-0.0.1-SNAPSHOT.jar` 
+	`java -jar target\postit-0.0.2-SNAPSHOT.jar` 
 
 
 \
