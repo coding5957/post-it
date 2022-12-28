@@ -3,7 +3,7 @@ package uk.co.northrealm.postit.services;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicLong;
 
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

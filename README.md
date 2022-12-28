@@ -12,8 +12,8 @@ Java, SpringBoot, SpringMVC, Hibernate, file based H2 db
 
 
 Preqs
-1. JDK 15 (https://jdk.java.net/15/)
-2. Maven (https://mirrors.gethosted.online/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)
+1. JDK 19 (https://jdk.java.net/19/)
+2. Maven (https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip)
 3. Gitscm (https://git-scm.com/download/win)
 
 
@@ -26,7 +26,7 @@ Steps
 
 - Execute
 
-	`java -jar target\postit-0.0.2-SNAPSHOT.jar` 
+	`java -jar target\postit-0.0.3-SNAPSHOT.jar` 
 
 
 \
